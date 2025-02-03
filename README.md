@@ -1,14 +1,25 @@
 # Adversarial Prompts Attack Vectors
 
 ## Introduction
+
+Adversarial Prompts are prompts engineered to test and try to bypass the safety filters of LLMs. Attack Vectors are the strategies employed by the prompts that has proved to be successful over time.
+
+Below is a mindmap with the attack vectors and its descriptions distilled from 18 academic papers suggested by a well-known GitHub repository on the topic. 
+
 ![Adversarial Prompts](https://github.com/user-attachments/assets/bf68b713-c77c-4492-ac8e-9d014b12523e)
-
-
 
 ## Methodology
 
-1. I obtained a list of relevant papers in this [repository by briland](https://github.com/briland/LLM-security-and-privacy?tab=readme-ov-file).
-2. 
+1. I obtained the list of relevant papers in this [repository by briland](https://github.com/briland/LLM-security-and-privacy?tab=readme-ov-file).
+ 
+2. I created a first table of attack vectors with the following prompt: 
+_"You are a collaborative AI Safety Engineer working on improving the Safety filter of your model. Examine each paper provided in the files and create a table with all adversarial prompts attack vectors you can observe. Present the information in a table format in which the first column is the name of the attack vector, the second column is the description of it and the third column is at least five examples of such prompts."_
+
+3. I tried to extract more attack vectors by running the following prompt twice: 
+_"Create a new table only with more attack vectors that have not been mentioned before."_
+
+4. Finally, I run the following prompt to eliminate repeated attack vectors: 
+_"Review all answer in previous prompts. Some of the attack vectors suggested are repeated. I want you to return a comprehensive list of all attack vectors, making sure to only metion them once. It is important to mention at least three real and complete examples in the third column."_
 
 ## Adversarial Prompts
 
@@ -34,3 +45,24 @@
 Download this table in [CSV here](https://github.com/user-attachments/files/18640814/AttackVectorName-Description-RealExamples.csv) .
 
 ## References
+
+| No. | Paper Title | Venue | Year | Category |
+|-----|-------------|-------|------|----------|
+| 1. | InjectAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents | pre-print | 2024 | Prompt Injection |
+| 2. | LLM Agents can Autonomously Hack Websites | pre-print | 2024 | Applications |
+| 3. | An Overview of Catastrophic AI Risks | pre-print | 2023 | General |
+| 4. | Use of LLMs for Illicit Purposes: Threats, Prevention Measures, and Vulnerabilities | pre-print | 2023 | General |
+| 5. | LLM Censorship: A Machine Learning Challenge or a Computer Security Problem? | pre-print | 2023 | General |
+| 6. | Beyond the Safeguards: Exploring the Security Risks of ChatGPT | pre-print | 2023 | General |
+| 7. | Prompt Injection attack against LLM-integrated Applications | pre-print | 2023 | Prompt Injection |
+| 8. | Identifying and Mitigating the Security Risks of Generative AI | pre-print | 2023 | General |
+| 9. | PassGPT: Password Modeling and (Guided) Generation with Large Language Models | ESORICS | 2023 | Applications |
+| 10. | Harnessing GPT-4 for generation of cybersecurity GRC policies: A focus on ransomware attack mitigation | Computers & Security | 2023 | Applications |
+| 11. | Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection | pre-print | 2023 | Prompt Injection |
+| 12. | Examining Zero-Shot Vulnerability Repair with Large Language Models | IEEE S&P | 2023 | Applications |
+| 13. | LLM Platform Security: Applying a Systematic Evaluation Framework to OpenAI's ChatGPT Plugins | pre-print | 2023 | General |
+| 14. | Chain-of-Verification Reduces Hallucination in Large Language Models | pre-print | 2023 | Hallucinations |
+| 15. | Pop Quiz! Can a Large Language Model Help With Reverse Engineering? | pre-print | 2022 | Applications |
+| 16. | Extracting Training Data from Large Language Models | Usenix Security | 2021 | Data Extraction |
+| 17. | Here Comes The AI Worm: Unleashing Zero-click Worms that Target GenAI-Powered Applications | pre-print | 2024 | Prompt-Injection |
+| 18. | CLIFF: Contrastive Learning for Improving Faithfulness and Factuality in Abstractive Summarization | EMNLP | 2021 | Hallucinations |
